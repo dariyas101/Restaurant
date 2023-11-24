@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        .navbar {
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 15px;
+        }
+
+        #specialOrder {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #343a40;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #timer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #dc3545;
+            background-color: gold;
+            border: 1px solid grey;
+            border-radius: 10px;
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        .discount-info {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: gray;
+            color: #fff;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .discount-info h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .discount-info p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        #div1 {
+            width: 350px;
+            height: 75px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Quiz</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="interactive.html">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="quiz.html">Quiz</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="specialOrder">
+        <h4>🎉 Special Order Offer 🎉</h4>
+        <p>Continue the quiz and get a discount on any dish from our menu!</p>
+        <p>Complete the quiz within the specified time to avail the discount.</p>
+
+        <!-- Timer for Special Order -->
+        <div id="timer">Time Left: <span id="countdown"></span></div>
+    </div>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Kazakhstan Quiz</h2>
+
+        <form id="quizForm">
+            <!-- Question 1 -->
+            <div class="form-group">
+                <label for="q1">1. What is the capital city of Kazakhstan?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1_almaty" value="almaty" required>
+                    <label class="form-check-label" for="q1_almaty">Almaty</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1_nur_sultan" value="nur-sultan">
+                    <label class="form-check-label" for="q1_nur_sultan">Nur-Sultan</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1_astana" value="astana">
+                    <label class="form-check-label" for="q1_astana">Astana</label>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="form-group">
+                <label for="q2">2. Which of the following is a traditional Kazakh dish?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2_sushi" value="sushi" required>
+                    <label class="form-check-label" for="q2_sushi">Sushi</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2_beshbarmak" value="beshbarmak">
+                    <label class="form-check-label" for="q2_beshbarmak">Beshbarmak</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2_pizza" value="pizza">
+                    <label class="form-check-label" for="q2_pizza">Pizza</label>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="form-group">
+                <label for="q2">3. What is the largest lake in Kazakhstan?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3_caspiansea" value="caspian sea"
+                        required>
+                    <label class="form-check-label" for="q3_caspiansea">Caspian Sea</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3_aralsea" value="aralsea">
+                    <label class="form-check-label" for="q3_aralsea">Aralsea</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3_balkash" value="balkash">
+                    <label class="form-check-label" for="q3_balkash">Lake Balkash</label>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="form-group">
+                <label for="q2">4. What traditional instrument is widely used in Kazakh music?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4_dombra" value="dombra" required>
+                    <label class="form-check-label" for="q4_dombra">Dombyra</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4_balalaika" value="balalaika">
+                    <label class="form-check-label" for="q4_balalaika">Balalaika</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4_saz" value="saz">
+                    <label class="form-check-label" for="q4_saz">Saz</label>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="form-group">
+                <label for="q2">5. Which of the following is a famous landmark in Kazakhstan?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5_tower" value="tower" required>
+                    <label class="form-check-label" for="q5_tower">Eiffel Tower</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5_khalifa" value="khalifa">
+                    <label class="form-check-label" for="q5_khalifa">Burj Khalifa</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5_baiterek" value="baiterek">
+                    <label class="form-check-label" for="q5_baiterek">Baiterek Tower</label>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="form-group">
+                <label for="q2">6. What is one of the major industries contributing to Kazakhstan's economy?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q6" id="q6_agriculture" value="agriculture"
+                        required>
+                    <label class="form-check-label" for="q6_agriculture">Agriculture</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q6" id="q6_fishing" value="fishing">
+                    <label class="form-check-label" for="q6_fishing">Fishing</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q6" id="q6_textiles" value="textiles">
+                    <label class="form-check-label" for="q6_textiles">Textiles</label>
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="form-group">
+                <label for="q2">7. Which animal is native to the Kazakh steppes?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q7" id="q7_bear" value="bear" required>
+                    <label class="form-check-label" for="q7_bear">Polar Bear</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q7" id="q7_saiga" value="saiga">
+                    <label class="form-check-label" for="q7_saiga">Saiga Antelope</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q7" id="q7_koala" value="koala">
+                    <label class="form-check-label" for="q7_koala">Koala</label>
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="form-group">
+                <label for="q2">8. What is the national sport of Kazakhstan?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8_w" value="w" required>
+                    <label class="form-check-label" for="q8_w">Wrestling</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8_sumo" value="sumo">
+                    <label class="form-check-label" for="q8_sumo">Sumo</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8_ice" value="ice">
+                    <label class="form-check-label" for="q8_ice">Ice Hockey</label>
+                </div>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="form-group">
+                <label for="q2">9. What is the traditional celebration held during the spring equinox in
+                    Kazakhstan?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q9" id="q9_nauryz" value="nauryz" required>
+                    <label class="form-check-label" for="q9_nauryz">Nauryz Meyrami</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q9" id="q9_diwali" value="diwali">
+                    <label class="form-check-label" for="q9_diwali">Diwali</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q9" id="q9_hanami" value="hanami">
+                    <label class="form-check-label" for="q9_hanami">Hanami</label>
+                </div>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="form-group">
+                <label for="q10">10. Which mountain range is located in Kazakhstan?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q10" id="q10_tien_shan" value="tien-shan"
+                        required>
+                    <label class="form-check-label" for="q10_tien_shan">Tien Shan</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q10" id="q10_himalayas" value="himalayas">
+                    <label class="form-check-label" for="q10_himalayas">Himalayas</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q10" id="q10_rocky_mountains"
+                        value="rocky-mountains">
+                    <label class="form-check-label" for="q10_rocky_mountains">Rocky Mountains</label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Quiz</button>
+        </form>
+    </div>
+
+    <!-- Drag and drop game -->
+    <p> Did you answer all the questions correctly? If yes, drag the photo into the rectangle: </p>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <br>
+    <img id="drag1" src="salut.jpeg" draggable="true" ondragstart="drag(event)" width="350" height="75">
+
+
+    <!-- Discount Information -->
+    <div class="discount-info">
+        <h3>Your Quiz Score is Your Discount!</h3>
+        <p>Congratulations on completing the Kazakhstan Quiz! Your score on the quiz corresponds to a discount on any
+            dish from our menu. The higher your score, the greater your discount. Don't miss out on the opportunity to
+            enjoy delicious Kazakh cuisine at a special price!</p>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <p>&copy; 2023 Ornament Restaurant | Designed by Dariya Serikova</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Retrieve selected answers
+            const answers = {
+                q1: document.querySelector('input[name="q1"]:checked').value,
+                q2: document.querySelector('input[name="q2"]:checked').value,
+                q3: document.querySelector('input[name="q3"]:checked').value,
+                q4: document.querySelector('input[name="q4"]:checked').value,
+                q5: document.querySelector('input[name="q5"]:checked').value,
+                q6: document.querySelector('input[name="q6"]:checked').value,
+                q7: document.querySelector('input[name="q7"]:checked').value,
+                q8: document.querySelector('input[name="q8"]:checked').value,
+                q9: document.querySelector('input[name="q9"]:checked').value,
+                q10: document.querySelector('input[name="q10"]:checked').value,
+            };
+
+            // Check answers
+            const correctAnswers = {
+                q1: 'nur-sultan',
+                q2: 'beshbarmak',
+                q3: 'balkash',
+                q4: 'dombra',
+                q5: 'baiterek',
+                q6: 'agriculture',
+                q7: 'saiga',
+                q8: 'w',
+                q9: 'nauryz',
+                q10: 'tien-shan',
+            };
+
+            let score = 0;
+
+            for (const question in answers) {
+                if (answers.hasOwnProperty(question) && answers[question] === correctAnswers[question]) {
+                    score++;
+                }
+            }
+            alert(`Your score: ${score} out of 10`);
+        });
+
+        // Special Order Timer
+        const timer = document.getElementById('countdown');
+        const endTime = new Date().getTime() + 15 * 60 * 1000; // 15 minutes timer duration
+
+        function updateTimer() {
+            const now = new Date().getTime();
+            const distance = endTime - now;
+
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            timer.textContent = `${minutes}m ${seconds}s`;
+
+            if (distance < 0) {
+                timer.textContent = 'Time expired';
+                // You can add further actions here when the timer expires
+            }
+        }
+
+        setInterval(updateTimer, 1000);
+        updateTimer(); // Initial update
+
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</body>
+
+</html>

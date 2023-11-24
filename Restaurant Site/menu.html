@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ornament Restaurant - Menu</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body {
+            padding-top: 56px;
+        }
+
+        .navbar {
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .card {
+            border: none;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#"><i class="fas fa-utensils"></i>Ornament Restaurant</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="interactive.html">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="quiz.html">Quiz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#reservationModal">Reserve Now</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Menu Categories Section using Bootstrap Cards -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Our Menu</h2>
+
+        <!-- Dishes Category -->
+        <div class="container mt-4" id="menu">
+            <div class="card-deck">
+                <div class="card">
+                    <img src="beshbarmaq.png" class="card-img-top" alt="Beshbarmaq">
+                    <div class="card-body">
+                        <h5 class="card-title">Beshbarmaq</h5>
+                        <p class="card-text">If, when visiting Kazakhstan for the first time, you ask what Kazakh dishes
+                            to
+                            try, you will definitely be answered: “Besbarmak.” The second name for besbarmak is et
+                            (“meat in
+                            Kazakh”).
+
+                            The dish consists of boiled meat (horse meat, lamb, beef or camel meat), thin dough and
+                            broth.
+                        </p>
+                        <p class="card-text"><strong>Cost:</strong> 3490</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="quyrdaq.png" class="card-img-top" alt="Quyrdaq">
+                    <div class="card-body">
+                        <h5 class="card-title">Quyrdaq</h5>
+                        <p class="card-text">Kuyrdak (translated as “frying” - named because of the cooking method) is
+                            the
+                            national Kazakh roast. It is prepared only from fresh meat. To prepare kuyrdak, finely
+                            chopped
+                            fatty lamb, tripe, intestines, lungs and liver are fried in its own juice, sometimes with
+                            the
+                            addition of sour cream.</p>
+                        <p class="card-text"><strong>Cost:</strong> 3290</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="sirne.png" class="card-img-top" alt="Sirne">
+                    <div class="card-body">
+                        <h5 class="card-title">Sirne</h5>
+                        <p class="card-text">The young lamb simmers on the fire for a long time - this is how the meat becomes
+                            very
+                            tender. Onions, potatoes and other vegetables are added to the roast (depending on the
+                            region).
+                            Syrne is prepared in a large cauldron to serve to all neighbors.</p>
+                        <p class="card-text"><strong>Cost:</strong> 2990</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mt-4" id="snacks">
+                <h2 class="text-center mb-4">Tiske basar</h2>
+                <div class="card-deck">
+                    <div class="card">
+                        <img src="bauyrsaq.png" class="card-img-top" alt="Bauyrsaq">
+                        <div class="card-body">
+                            <h5 class="card-title">Bauyrsaq</h5>
+                            <p class="card-text">Baursaks are pieces of yeast dough fried in a large amount of oil.
+                                Baursaks
+                                taste sweetish and can be served as a separate dish. But, as a rule, Baursaks always eat
+                                with something. A good housewife will serve them not only with the main course, but also
+                                with tea.</p>
+                            <p class="card-text"><strong>Cost:</strong> 790</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="zhent.png" class="card-img-top" alt="Zhent">
+                        <div class="card-body">
+                            <h5 class="card-title">Zhent</h5>
+                            <p class="card-text">Popular dishes in Kazakhstan are not only meat and dairy. Zhent is a
+                                dessert made from crushed cottage cheese, millet, sugar, raisins and butter. After
+                                mixing
+                                the ingredients, the dessert can be given any shape. When the zhent has hardened, it is
+                                cut
+                                and served for tea.</p>
+                            <p class="card-text"><strong>Cost:</strong> 790</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="Irimshik.png" class="card-img-top" alt="Irimshik">
+                        <div class="card-body">
+                            <h5 class="card-title">Irimshik</h5>
+                            <p class="card-text">This is cottage cheese that has a slightly sweet taste even without
+                                added
+                                sugar. The milk is brought to a boil over low heat, then cooled slightly, the starter is
+                                added, stirred and left for a couple of hours. Then put the milk back on low heat and
+                                bring
+                                to a boil. Then put the cottage cheese in a bag and allow the excess liquid to drain.
+                            </p>
+                            <p class="card-text"><strong>Cost:</strong> 890</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="qurt.png" class="card-img-top" alt="Qurt">
+                        <div class="card-body">
+                            <h5 class="card-title">Qurt</h5>
+                            <p class="card-text">We can say that kurt is a dried concentrate of natural milk with a
+                                natural
+                                preservative - salt, so kurt is a way of preserving milk. Kurt was invented by the
+                                nomadic
+                                peoples of Central Asia.</p>
+                            <p class="card-text"><strong>Cost:</strong> 290</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drinks Category -->
+            <div class="card-deck mb-4">
+                <div class="card">
+                    <img src="qymyz.png" class="card-img-top" alt="Qymyz">
+                    <div class="card-body">
+                        <h5 class="card-title">Qymyz</h5>
+                        <p class="card-text">Qymyz is a fermented milk drink made from mare's milk, 
+                            obtained as a result of lactic and alcoholic 
+                            fermentation using Bulgarian and acidophilic lactic acid rods and yeast. 
+                            The drink is foamy, whitish in color, and tastes sweet and sour.</p>
+                        <p class="card-text"><strong>Cost:</strong> 1290</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="shubat.jpeg" class="card-img-top" alt="Shubat">
+                    <div class="card-body">
+                        <h5 class="card-title">Shubat</h5>
+                        <p class="card-text">Shubat is a fermented milk drink made from camel milk. Compared to koumiss, 
+                            it has a higher fat content. 
+                            Depending on the aging, there are several types of shubat - light, medium strength and the strongest.</p>
+                        <p class="card-text"><strong>Cost:</strong> 1190</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order and Payment Section -->
+            <div class="mb-4">
+                <h2 class="text-center mb-4">Place Your Order</h2>
+                <form id="orderForm">
+                    <div class="form-group">
+                        <label for="itemName">Select Item</label>
+                        <select id="itemName" class="form-control" required>
+                            <option value="" disabled selected>Select an item</option>
+                            <option value="Beshbarmaq">Beshbarmaq</option>
+                            <option value="Quyrdaq">Quyrdaq</option>
+                            <option value="Sirne">Sirne</option>
+                            <option value="Bauyrsaq">Bauyrsaq</option>
+                            <option value="Zhent">Zhent</option>
+                            <option value="Irimshik">Irimshik</option>
+                            <option value="Qurt">Qurt</option>
+                            <option value="Qymyz">Qymyz</option>
+                            <option value="Shubat">Shubat</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="quantity">Quantity</label>
+                            <input type="number" class="form-control" id="quantity" placeholder="Enter quantity"
+                                required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="paymentMethod">Payment Method</label>
+                            <select id="paymentMethod" class="form-control" required>
+                                <option value="" disabled selected>Select a payment method</option>
+                                <option value="creditCard">Kaspi</option>
+                                <option value="cash">Halyk Bank</option>
+                                <option value="cash">Cash</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" placeholder="Enter your full name"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="placeOrder()">Place Order</button>
+                </form>
+
+                <!-- Payment Success Modal -->
+                <div class="modal fade" id="paymentSuccessModal" tabindex="-1" role="dialog"
+                    aria-labelledby="paymentSuccessModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="paymentSuccessModalLabel">Payment Success</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Your order has been placed successfully. Thank you for choosing Ornament Restaurant!
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+            <script>
+                function placeOrder() {
+                    $('#paymentSuccessModal').modal('show');
+                    document.getElementById("orderForm").reset();
+                }
+            </script>
+
+
+
+            <!-- Footer -->
+            <footer class="text-center">
+                <p>&copy; 2023 Ornament Restaurant | Designed by Dariya Serikova</p>
+            </footer>
+</body>
+
+</html>

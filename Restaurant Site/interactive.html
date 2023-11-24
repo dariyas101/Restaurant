@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ornament Restaurant</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <style>
+        body {
+            padding-top: 56px;
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+
+        nav {
+            background-color: #343a40;
+        }
+
+        nav a,
+        .navbar-brand {
+            color: #ffffff;
+        }
+
+        nav a:hover {
+            color: #17a2b8;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 15px;
+        }
+
+        #aboutKazakhstan {
+            background-color: #343a40;
+            padding: 40px;
+            border-radius: 5px;
+            color: #ffffff;
+            text-align: justify;
+        }
+
+        #aboutKazakhstan h2 {
+            color: #ffffff;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #aboutKazakhstan p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        #aboutKazakhstan a {
+            color: #343a40;
+            text-decoration: underline;
+        }
+
+        #aboutKazakhstan a:hover {
+            color: #ffffff;
+        }
+
+        #fullScreenVideo {
+            margin-top: 20px;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        #fullScreenVideo {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        #additionalInfo {
+            padding: 40px;
+            text-align: center;
+        }
+
+        #additionalInfo h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        #additionalInfo img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="#"><i class="fas fa-utensils"></i>Ornament Restaurant</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="interactive.html">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="quiz.html">Quiz</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Kazakhstan -->
+    <div id="aboutKazakhstan" class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="display-4 mb-4">About Kazakhstan</h2>
+                <p class="lead mb-4">
+                    Welcome to Ornament Restaurant, a place where you can experience the rich cultural heritage
+                    and flavors of Kazakhstan. Immerse yourself in the traditions of this beautiful country,
+                    known for its breathtaking landscapes, warm hospitality, and unique culinary delights.
+                </p>
+                <p>
+                    Kazakhstan, the world's largest landlocked country, is located in Central Asia and Eastern Europe.
+                    It is known for its diverse landscapes, ranging from the vast steppes to the stunning mountains,
+                    including the famous Tien Shan range. The cultural tapestry of Kazakhstan is woven with influences
+                    from various ethnic groups, creating a harmonious blend of traditions, art, and customs.
+                </p>
+                <p>
+                    At Ornament Restaurant, we take pride in bringing you the authentic flavors of Kazakh cuisine.
+                    Indulge in our menu featuring traditional dishes such as Beshbarmak, Plov, and Shubat, accompanied
+                    by the warmth of our hospitality. Each dish is a celebration of the unique culinary heritage of
+                    Kazakhstan, showcasing the flavors passed down through generations.
+                </p>
+                <p>
+                    Join us on a gastronomic journey through the heart of Kazakhstan. Experience the taste of
+                    tradition, the warmth of Kazakh hospitality, and the beauty of a culture that has stood the
+                    test of time.
+                </p>
+                <p>
+                    <a href="menu.html" class="btn btn-light btn-lg">Explore Our Menu</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Full Screen Video -->
+    <div id="fullScreenVideo" class="container">
+        <h2 class="display-4 mb-4">Discover Kazakhstan!</h2>
+        <p class="lead mb-4">
+            Watch a captivating video about Kazakhstan in full-screen mode.
+        </p>
+        <video controls>
+            <source src="video.MP4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Additional Information -->
+    <div id="additionalInfo" class="container">
+        <h2 class="display-4 mb-4">Explore More</h2>
+        <p class="lead mb-4">
+            Discover additional information and images related to Kazakhstan.
+        </p>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="landscape.png" alt="Kazakhstan Image 1">
+                <p>Beautiful Landscape</p>
+            </div>
+            <div class="col-md-4">
+                <img src="food.png" alt="Kazakhstan Image 2">
+                <p>Traditional Kazakh Food</p>
+            </div>
+            <div class="col-md-4">
+                <img src="heritage.png" alt="Kazakhstan Image 3">
+                <p>Cultural Heritage</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white py-3 text-center">
+        <p>&copy; 2023 Ornament Restaurant | Designed by Dariya Serikova</p>
+    </footer>
+
+    <!-- Bootstrap and JavaScript dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+
+
+    <!-- JavaScript for Interactive Element, Full Screen Video, Modal, and Scroll Top Button -->
+    <script>
+
+        // Scroll Top Button
+        const scrollTopBtn = document.createElement("button");
+        scrollTopBtn.id = "myBtn";
+        scrollTopBtn.title = "Go to top";
+        scrollTopBtn.innerHTML = "&#9650; Top";
+        document.body.appendChild(scrollTopBtn);
+
+        scrollTopBtn.addEventListener("click", function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+
+        window.addEventListener("scroll", function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
